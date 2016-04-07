@@ -1,0 +1,18 @@
+Problem:
+A rover is handed a set of instructions on how to move and keeps track of its current position. It also tells you it's current position when asked.
+
+Pseudocode:
+Create a rover class that takes in an x,y, and direction argument.
+
+Give the class accessors
+
+Give the rover a position method that returns the current position a rover is in and in a formatted string form.
+
+Give the rover a move fuction that takes in a string of movements and updates the position of the Rover.
+  -The move function will first split the coordinates into an array.
+  -The move function will then iterate through the coordinates array and update the position respectively.
+  -For a move command the move function will update the x and y coordinates depending on which direction it's facing.
+  -For the direction it will look at the current direction and move to the right or left respectively according to the compass.
+
+
+
