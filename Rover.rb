@@ -15,9 +15,7 @@ class Rover
 
   def move(coordinates)
     coordinates.each_char do |value|
-      if value == 'M'
-        move_position
-      end
+      value == 'M' ? move_position : move_direction(value)
     end
   end
 
@@ -29,13 +27,19 @@ class Rover
     end
   end
 
-  def move_direction
-
+  def move_direction(coordinate)
+    direction_compass = @compass.keys
+    compass_position = direction_compass.find_index(@direction)
+    if coordinate == "R"
+      self.direction =direction_compass[compass_position +1]
+    else
+      self.direction = direction_compass[compass_position -1]
+    end
   end
 end
 
 new_rover = Rover.new(3,4,'S')
 new_rover.move("M")
-puts new_rover.position
+
 
 

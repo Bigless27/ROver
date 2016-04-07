@@ -12,10 +12,16 @@ describe "Rover" do
   end
 
   context "The rover can move" do
-    it "the rover can change position" do
+    it "can change position" do
       rover = Rover.new(3,3,'N')
       rover.move('M')
       expect(rover.position).to match("3, 4, N")
+    end
+
+    it "can change direction" do
+      rover = Rover.new(3,3,'N')
+      rover.move('R')
+      expect(rover.position).to match("3, 3, E")
     end
   end
 end
